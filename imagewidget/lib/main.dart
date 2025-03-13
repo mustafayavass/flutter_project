@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:imagewidget/index.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text("Image Widget"),
-      ),
-      body: Center(
-        child: Image.asset('img/wallp.jpeg'),
-      ),
-    ));
+      home: Index(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

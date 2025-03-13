@@ -6,7 +6,9 @@ void main() {
 
 class MyApp extends StatefulWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyApp> createState() {
+    return _MyAppState();
+  }
 }
 
 class _MyAppState extends State<MyApp> {
@@ -20,10 +22,8 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text(
-              "Login",
-              style: TextStyle(fontSize: 25, color: Colors.white),
-            ),
+            child: Text("Login",
+                style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
           backgroundColor: Colors.lightBlue,
         ),
