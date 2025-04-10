@@ -25,8 +25,33 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              TextField(
-                onChanged: _textFieldChanged,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  onChanged: _textFieldChanged,
+                  keyboardType: TextInputType.emailAddress,
+                  maxLines: 1,
+                  maxLength: 10,
+                  textAlign: TextAlign.start,
+                  textDirection: TextDirection.ltr,
+                  obscureText: true,
+                  enabled: true,
+                  autofocus: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50)),
+                      labelText: "E-posta adresinizi giriniz",
+                      contentPadding: EdgeInsets.all(40),
+                      counterText: "E-posta",
+                      counter: Icon(Icons.access_alarms),
+                      filled: true,
+                      fillColor: Colors.grey,
+                      //hintText: "E-posta adresinizi giriniz"
+                      prefixIcon: Icon(Icons.text_fields),
+                      prefixText: "E-mail: ",
+                      suffixIcon: Icon(Icons.wallet),
+                      suffixText: "E-mail"),
+                ),
               ),
               Text(_text),
               ElevatedButton(
