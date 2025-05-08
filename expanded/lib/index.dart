@@ -57,7 +57,7 @@ class _IndexState extends State<Index> {
               ),
             ),
             Expanded(
-              flex: 1,
+              flex: 3,
               child: Container(
                 width: double.infinity,
                 color: Colors.green,
