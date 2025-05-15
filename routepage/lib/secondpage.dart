@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Secondpage extends StatefulWidget {
-  const Secondpage({super.key});
-
-  @override
-  State<Secondpage> createState() => _SecondpageState();
-}
-
-class _SecondpageState extends State<Secondpage> {
+class Secondpage extends StatelessWidget {
+  String _yaziIcerigi;
+  Secondpage(this._yaziIcerigi);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +15,20 @@ class _SecondpageState extends State<Secondpage> {
         backgroundColor: Colors.grey,
       ),
       body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text("İlk Sayfaya Geri Dön")),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              _yaziIcerigi,
+              style: TextStyle(fontSize: 35, color: Colors.deepOrangeAccent),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("İlk Sayfaya Geri Dön"))
+          ],
+        ),
       ),
     );
   }
