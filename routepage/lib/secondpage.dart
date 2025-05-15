@@ -24,9 +24,12 @@ class Secondpage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pop(context,25);
                 },
-                child: Text("İlk Sayfaya Geri Dön"))
+                child: Text(
+                  "İlk Sayfaya Geri Dön",
+                  
+                ))
           ],
         ),
       ),

@@ -10,6 +10,7 @@ class FirstPage extends StatefulWidget {
 
 class _FirstPageState extends State<FirstPage> {
   TextEditingController _controller = TextEditingController();
+  int? veri;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +26,18 @@ class _FirstPageState extends State<FirstPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(controller: _controller,),
+            TextField(
+              controller: _controller,
+            ),
             ElevatedButton(
                 onPressed: () {
                   _ikinciSayfayiAc(context);
                 },
                 child: Text("İkinci Sayfaya Git")),
+            Text(
+              veri.toString(),
+              style: TextStyle(fontSize: 35, color: Colors.deepOrange),
+            )
           ],
         ),
       ),
@@ -42,6 +49,12 @@ class _FirstPageState extends State<FirstPage> {
         MaterialPageRoute(builder: (BuildContext context) {
       return Secondpage(_controller.text);
     });
-    Navigator.push(context, sayfayolu);
+    Navigator.push(context, sayfayolu).then((gelenveri) {
+      setState(() {
+        if (gelenveri != null) {
+          veri = gelenveri;
+        }
+      });
+    });
   }
 }
