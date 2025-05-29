@@ -27,8 +27,7 @@ class Secondpage extends StatelessWidget {
                   Navigator.pop(context,25);
                 },
                 child: Text(
-                  "İlk Sayfaya Geri Dön",
-                  
+                  "İlk Sayfaya Geri Dön",                  
                 ))
           ],
         ),
